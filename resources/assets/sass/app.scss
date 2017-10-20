@@ -1,0 +1,39 @@
+
+// Fonts
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+//@import "variables";
+
+// Bootstrap
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+
+
+body{
+
+	visibility: hidden;
+}
+
+
+.soft-show{
+
+	animation: softShow 1s;
+}
+
+
+@keyframes softShow {
+    0%   {transform: scale(.7);}
+    /*25%   {transform: scale(1);}*/
+    /*50%   {transform: scale(1.5);}*/
+    12.5%   {transform: scale(1.12);}
+    /*75%   {transform: scale(1.5);}*/
+    25%   {transform: scale(.7);}
+    37.5%   {transform: scale(1.11);}
+    50%   {transform: scale(.8);}
+    62.5%   {transform: scale(1.10);}
+    75%   {transform: scale(.9);}
+    100%   {transform: scale(1);}
+    /*100% {transform: scale(1);}*/
+}

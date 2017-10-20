@@ -1,0 +1,30 @@
+main {
+
+	/*background: red;*/
+	min-height: 100vh;
+	padding:10px 0 20px 0;
+}
+
+
+.active {
+
+	background: #6098ff;
+	color: white;
+}
+.active:hover {
+
+	background: #6098ff;
+	color: white;
+}
+
+
+/*** Table Styles ***/
+
+th {
+
+	text-align: right;
+}
+
+
+
+/*** End Table Styles ***/
