@@ -20,6 +20,7 @@ class HomeController extends Controller
     	
     	$templateCount = Template::count();
 
+
     	JavaScript::put([
 
     	    'ControllerName' => 'home',

@@ -13,13 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 
 
 
-Route::get('/get_more_template', "CustomApiController@getMoreTemplate");
+
+
+// Route::group(['middleware' => 'auth:api', 'prefix' => '/v1'], function () {
+
+//     Route::get('/get_more_template', "CustomApiController@getMoreTemplate");
+
+// });
 
 

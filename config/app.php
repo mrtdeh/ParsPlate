@@ -171,7 +171,8 @@ return [
         Vinkla\Hashids\HashidsServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
         Morilog\Jalali\JalaliServiceProvider::class,
-
+        Cog\Likeable\Providers\LikeableServiceProvider::class,
+        
         /*
          * Application Service Providers...
          */

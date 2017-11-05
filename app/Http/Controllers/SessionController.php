@@ -18,6 +18,12 @@ class SessionController extends Controller
 	public function create()
 	
 	{
+
+		if(auth()->check())
+			if(auth()->user()->isSuperAdmin())
+				return redirect('/panel/dashboard');
+			else
+				return redirect()->home();
 		
 		return view("login");
 		
@@ -27,7 +33,7 @@ class SessionController extends Controller
 	public function store()
 	
 	{
-		//dd(request(["email", "password"]));
+
 		if(! auth()->attempt(request(["email", "password"]))) {
 
 			return back()->withErrors([
@@ -37,8 +43,10 @@ class SessionController extends Controller
 			]);
 		}	
 
-
-		return redirect("/panel");
+		if(auth()->user()->isSuperAdmin())
+			return redirect('/panel/dashboard');
+		else
+			return redirect()->home();
 	}
 
 

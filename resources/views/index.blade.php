@@ -13,10 +13,10 @@
             <div class="text-center">
                 
                 <div class="pt-5">
-                    <h2>اعتبار ما اعتماد شماست</h2>
+                    <h2>قالبِت رو راحت پیدا کن ؛ راحت دانلود کن و اگه نبود سفارش بده !!</h2>
                 </div>
                 <div class="pt-2">
-                    <p>شس یشسیس سیسشسشال شل شسایش س ششسلبی شسیشهعی شسزیس ایسصثف قلطز سی یسابسیاب</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -41,16 +41,3 @@
 
 @endsection
 
-
-@section("startHead")
-
-    @getAppCss()
-    
-@endsection
-
-@section("endBody")
-
-    @include("jsVars")
-    @getAppScript()
-    
-@endsection

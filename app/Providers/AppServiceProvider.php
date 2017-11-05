@@ -7,20 +7,16 @@ use Illuminate\Support\Facades\Blade;
 
 use App\Post;
 
+
+
+
 class AppServiceProvider extends ServiceProvider
 {
 
     public function boot()
     {
 
-
-
-        Blade::directive('option', function ($arguments) {
-
-            list($name, $val) = explode(',',str_replace(['(',')',' ', "'"], '', $arguments));
-            return "<script>if(!options) var options = [];options[${name}] = ${val}</script>";
-        });
-
+\
         Blade::directive('getAppScript', function () {
 			$s = "<script src='<?php echo asset('/js/'.basename(mix('/js/manifest.js'))) ?>'></script>";
 			$s .= "<script src='<?php echo asset('/js/'.basename(mix('/js/vendor.js'))) ?>'></script>";

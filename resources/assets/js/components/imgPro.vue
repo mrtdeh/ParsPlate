@@ -94,7 +94,7 @@ export default {
 
 			 el.onerror = function (e) { 
 
-				el.src = self.assets + "not-found-image.png";
+				//el.src = self.assets + "not-found-image.png";
 			 }
 
 			// var img = new Image();

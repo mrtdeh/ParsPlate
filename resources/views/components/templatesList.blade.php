@@ -5,16 +5,28 @@
     {{-- Templates --}}
 
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" v-for="t in givenTemplates">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" v-for="(t,i) in givenTemplates">
             <div class="card soft-show">
                 <a :href="'/template/' + t.hashid + '/' + t.kebabTitle">
                     <div class="img">
-                        <img-pro :src="'../images/products/thumb_' + t.cover" 
-                        :alt="t.title">
+                        <img-pro :src="'../images/products/thumb_' + t.tag + '.jpg'" :alt="t.title" :title="t.title">
                     </div>
                     <div class="info">
-                        <a :href="'/template/' + t.hashid + '/' + t.kebabTitle"><strong>@{{ t.title }}</strong></a>
-                        <p> dsfsdf sdfd sdfds sdf ds...</p>
+                        <a :href="'/template/' + t.hashid + '/' + t.kebabTitle"><strong>@{{ t.title.toFaDigit() }}</strong></a>
+
+
+                        <div class="bottom">
+                         {{--    <div class="col-md-6"></div>
+                            <div class="col-md-6"></div> --}}
+                            <span class="date">
+                                <i class="fa fa-clock-o fa-lg"></i> @{{ t.humanDate.toFaDigit() }}
+                            </span>
+                            <span class="heart" @click="likeToggle(t,i)">
+                                @{{ t.likesCount.toFaDigit() }} 
+                                <i class="fa fa-2x" :class="likedStatus(t,i)"></i>
+                            </span>
+                        </div>
+                        
                     </div>
                 </a>
             </div>

@@ -8,8 +8,19 @@
 /*!
   Bootstrp4 RTL WorkfloW by Mohammad Sharifi
   Lenus.org
-*/body{font-family:IranianSerifWeb-Regular!important}@font-face{font-family:Kinescope;src:url(../fonts/Kinescope.otf)}@font-face{font-family:yekan;src:url(../fonts/BYekan.ttf)}.h1,.h2,.h3,.h4,.h5,.h6,a,body,button,h1,h2,h3,h4,h5,h6,li,p{font-family:yekan}nav.navbar{position:absolute;width:100%;background:transparent;z-index:0}nav.navbar h1.navbar-brand{font-size:2.2em;line-height:0;padding-top:45px;margin:0}nav.navbar h1.navbar-brand a{font-family:Kinescope}nav.navbar h1 .brand{color:#dadada!important;text-shadow:0 0 20px #fff;position:relative;font-size:1.7em}nav.navbar #main-menu-button{color:#dadada;float:right}nav.navbar #signin-button{color:#dadada;float:left;font-size:1.3em}main{z-index:1;background:#e8e8e8}main .templates{padding-top:20px}main .templates .card{height:350px;margin:20px 0;border:0}main .templates .card .info{text-align:center;padding:20px 10px;height:100%;border-top:1px solid #efefef}main .templates .card .img img{width:100%}#product-view{background:#f9f9f9;padding-bottom:30px;min-height:450px}footer{z-index:2;position:relative}footer div{text-align:center;background:#15191f;color:hsla(0,0%,100%,.37);font-size:.7em;padding:5px}footer #features{min-height:100px;background:#15191f;padding:10px 20px}footer #footer-content{background:#e8e8e8;min-height:350px;padding:10px 20px}footer #footer-content .product-techs{display:none;padding:0;margin:0;text-align:center;width:100%}footer #footer-content .product-techs li{list-style:none;display:inline-block}.jumbotron{background:url(../images/main-bg.jpg) no-repeat;margin-bottom:0!important;border-radius:0;min-height:600px!important;color:#dadada;padding-top:159px}.product-jumbotron{height:auto!important;background:radial-gradient(circle at 50% 53%,#4d6570,#243238)}.product-jumbotron .cover{text-align: center;}.product-jumbotron .cover img{width:536px}.product-jumbotron .content{font-size:.8em}.product-jumbotron .content h3{margin-bottom:20px}.product-jumbotron .content p{color:hsla(0,0%,100%,.53)}.product-jumbotron .features ul{margin:0;padding:0;list-style:none}.product-jumbotron .features li{line-height:2.8em}.product-jumbotron .actions .fa{margin:0 8px}.navbar{text-align:center;display:block}.carousel-item,.jumbotron{height:100vh;min-height:200px;background-size:cover}
+*/body{font-family:IranianSerifWeb-Regular!important}@font-face{font-family:Kinescope;src:url(../fonts/Kinescope.otf)}@font-face{font-family:yekan;src:url(../fonts/BYekan.ttf)}.h1,.h2,.h3,.h4,.h5,.h6,a,body,button,h1,h2,h3,h4,h5,h6,li,p{font-family:yekan}nav.navbar{position:absolute;width:100%;background:transparent;z-index:0}nav.navbar h1.navbar-brand{font-size:2.2em;line-height:0;padding-top:45px;margin:0}nav.navbar h1.navbar-brand a{font-family:Kinescope}nav.navbar h1 .brand{color:#dadada!important;text-shadow:0 0 20px #fff;position:relative;font-size:1.7em}nav.navbar #main-menu-button{color:#dadada;float:right}nav.navbar #signin-button{color:#dadada;float:left;font-size:1.3em}main{z-index:1;background:#e8e8e8}main .templates{padding-top:20px}main .templates .card{height:350px;margin:20px 0;border:0}main .templates .card .info{text-align:center;padding:15px 10px;height:100%;border-top:1px solid #efefef}main .templates .card .img img{width:100%}#product-view{background:#f9f9f9;padding-bottom:30px;min-height:450px}footer{z-index:2;position:relative}footer div{text-align:center;background:#15191f;color:hsla(0,0%,100%,.37);font-size:.7em;padding:5px}footer #features{min-height:100px;background:#15191f;padding:10px 20px}footer #footer-content{background:#e8e8e8;min-height:350px;padding:10px 20px}footer #footer-content .product-techs{display:none;padding:0;margin:0;text-align:center;width:100%}footer #footer-content .product-techs li{list-style:none;display:inline-block}.jumbotron{background:url(../images/main-bg.jpg) no-repeat;margin-bottom:0!important;border-radius:0;min-height:600px!important;color:#dadada;padding-top:159px}.product-jumbotron{height:auto!important;}.product-jumbotron .cover{text-align: center;}.product-jumbotron .cover img{width:536px}.product-jumbotron .content{font-size:.8em}.product-jumbotron .content h3{margin-bottom:20px}.product-jumbotron .content p{color:hsla(0,0%,100%,.53)}.product-jumbotron .features ul{margin:0;padding:0;list-style:none}.product-jumbotron .features li{line-height:2.8em}.product-jumbotron .actions .fa{margin:0 8px}.navbar{text-align:center;display:block}.carousel-item,.jumbotron{height:100vh;min-height:200px;background-size:cover}
 
+/*h1,h2,h3,h4,h5,h6,p{color: #656565 !important}*/
+
+.navbar .dropdown-item span {
+	display: block;
+	font-size: .7em;
+	color: silver
+}
+
+.dropdown-item {
+	color: #7b7b7b;
+}
 
 @keyframes moveArrow{
 
@@ -28,3 +39,124 @@
 	margin-left: 5px;
 	animation: moveArrow 2s infinite
 }
+
+@keyframes heartLoading{
+
+	0%{
+		color: silver		
+	}
+	
+	50% {
+		color: #292b2c
+	}
+	100% {
+		color: silver
+	}
+}
+
+.heart-loading {
+	
+	animation: heartLoading 2s infinite
+}
+
+.fa-heart.liked {color: red}
+
+.info {
+
+	position: relative;
+}
+.info .bottom {
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 7px 10px;
+	right: 0;
+
+	font-size: small;
+	font-family: yekan;
+}
+
+.info .date { text-align: right; width: 70%;display: inline-block;}
+.info .heart { text-align: left; width: 30%;display: inline-block;}
+.info .heart i{ cursor: pointer }
+
+
+.templates .card { border: 1px solid #e0e0e0 !important; }
+
+
+.product-jumbotron {
+
+	position: relative;
+	background-size: cover !important;
+}
+.product-jumbotron .content{
+
+	font-weight: 700;
+	text-shadow: 0 0 10px black
+}
+
+.product-jumbotron li{
+
+	font-size: 1.2em;
+}
+
+#product-view .content {
+
+	color: #696969;
+}
+
+nav.navbar {
+
+	z-index: 1;
+}
+
+
+.counters {
+
+	width: 536px;
+	margin: auto;
+	padding-bottom: 13px;
+	font-size: 0.8em;
+	font-family: yekan;
+	color: #bfbfbf;
+	text-align: left;
+}
+
+
+.counters .fa {
+
+	margin-right: 5px;
+
+}
+
+
+span {
+	font-family: yekan;
+}
+
+
+.counters div {
+
+	display: inline-block;
+	min-width: 100px
+
+}
+
+.content .date {
+
+	color: #bfbfbf;
+}
+
+.heart i {
+	cursor: pointer;
+}
+
+
+/*
+
+
+.product-jumbotron{
+
+	background: radial-gradient(circle at 50% 53%,#37363c,#1B1725)
+}*/

@@ -89,15 +89,3 @@
 @endsection
 
 
-@section("startHead")
-
-    @getAppCss()
-    
-@endsection
-
-@section("endBody")
-
-    @include("jsVars")
-    @getAppScript()
-    
-@endsection

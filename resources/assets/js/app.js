@@ -20,7 +20,11 @@ window.Vue = require('vue');
 
  //import Vue from 'vue'
 
- import vueResource from 'vue-resource'
+import vueResource from 'vue-resource'
+
+import VModal from 'vue-js-modal'
+
+Vue.use(VModal)
 // import vueCookie from 'vue-cookie'
 // import JDate from 'jalali-date'
 //import store from './store'
@@ -32,10 +36,6 @@ Vue.use(vueResource)
 Vue.http.options.emulateJSON = true;
 Vue.http.options.emulateHTTP = true;
 
-// if(options['root'] != '/')
-//   Vue.http.options.root = options['root']
-// else
-//   Vue.http.options.root = ""
 
 var page;
 
@@ -59,19 +59,40 @@ new Vue({
 
   data() { 
     return {
-      
+      signedIn
     }
   },
+  
   created(){
    console.log(ControllerName)
   },
+
   mounted(){
 
     setTimeout(()=>{
       document.getElementsByTagName("body")[0].style.visibility = "visible"
     },500)
 
-  }
+
+    setInterval(()=>{
+
+      this.$http.get("/api/checkLogin").then(res=>{
+        
+        if(res.body.status == 1)
+          
+          this.signedIn = true
+        
+        else
+
+          this.signedIn = false
+
+      })
+
+    },3000)
+
+
+  },
+
 
 })
 

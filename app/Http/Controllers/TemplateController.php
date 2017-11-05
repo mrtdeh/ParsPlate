@@ -6,11 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Template;
 
-use JavaScript;
-
-use Image;
-
-use Hashids;
+use JavaScript, Image, Hashids, Counter;
 
 
 class TemplateController extends Controller
@@ -42,18 +38,18 @@ class TemplateController extends Controller
 
         //if (!Input::file('cover')->isValid())
         //  die("upload err");
+        $tag = str_random(20);
 
-        $name = str_random(10) . "." . request()->file('cover')->clientExtension();
+        $name = $tag . ".jpg" ;//. request()->file('cover')->clientExtension();
+        // $name = str_random(10) . "." . request()->file('cover')->clientExtension();
 
 
         $img = Image::make(request()->file('cover'));
 
-        // ->resize(536, null)
-        //$img->crop($img->width(),1000)
+
         $img->widen(536)
 
-
-        ->crop(536, 710, 0, 0)
+        ->crop(536, 600, 0, 0)
 
         ->save(public_path()."/images/products/cover_${name}")
 
@@ -70,11 +66,12 @@ class TemplateController extends Controller
 
             "desc" => request("desc"),
 
-            "cover" => $name,
+            "tag" => $tag,
+            // "cover" => $name,
 
-            "demo_addr" => "demo test",
+            // "demo_addr" => "demo test",
 
-            "zip_addr" => "zip test",
+            // "zip_addr" => "zip test",
 
         ]);
 
@@ -95,6 +92,20 @@ class TemplateController extends Controller
         $id = array_pop($id);
 
     	$template = Template::find( $id );
+
+        if(empty($template)){
+            return view("errors.404");
+        }
+
+        JavaScript::put([
+
+            'ControllerName' => 'template',
+
+            'template' => $template,
+
+        ]);
+
+        Counter::count("pageviews" . $id);
     	
     	return view("product", compact("template"));
     

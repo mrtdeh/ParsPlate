@@ -12,40 +12,19 @@ class TemplatesTableSeeder extends Seeder
     public function run()
     {
         DB::table('templates')->insert([
-        	'user_id' => 1,
+            'user_id' => 1,
             'title' => "قالب فروشگاهی وردپرس",
             'desc' => 'sdfsdfsdfsdfsdf',
-            'cover' => '1.jpg',
-            'demo_addr' => 'demo address',
-            'zip_addr' => 'zip address',
+            'tag' => "test"
         ]);
 
         DB::table('templates')->insert([
         	'user_id' => 1,
-            'title' => "قالب تجاری",
-            'desc' => 'sdfsdfsdfsdfsdf',
-            'cover' => '2.jpg',
-            'demo_addr' => 'demo address',
-            'zip_addr' => 'zip address',
+            'title' => " 222قالب فروشگاهی وردپرس",
+            'desc' => 'sdfsdf',
+            'tag' => "test2"
         ]);
 
-        DB::table('templates')->insert([
-        	'user_id' => 1,
-            'title' => "قالب شخصی پارس",
-            'desc' => 'sdfsdfsdfsdfsdf',
-            'cover' => '3.jpg',
-            'demo_addr' => 'demo address',
-            'zip_addr' => 'zip address',
-        ]);
-
-
-        DB::table('templates')->insert([
-            'user_id' => 1,
-            'title' => "قالب شرکتی خزر",
-            'desc' => 'sdfsdfsdfsdfsdf',
-            'cover' => '4.jpg',
-            'demo_addr' => 'demo address',
-            'zip_addr' => 'zip address',
-        ]);
+        
     }
 }

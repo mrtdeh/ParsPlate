@@ -12,6 +12,10 @@ svg rect[data-v-43c96d54]{
 
 
 
+.v--modal-overlay {
+  direction: ltr;
+}
+
 body {
   visibility: hidden;
 }

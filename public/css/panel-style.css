@@ -6,16 +6,26 @@ main {
 }
 
 
-.active {
+.active ,.active:hover{
+    box-shadow: inset 0px -2px 0 0px;
+	background: #f9f9f9;
+	color: #6098ff;
 
-	background: #6098ff;
-	color: white;
 }
-.active:hover {
 
-	background: #6098ff;
-	color: white;
+
+
+.inline-btn {
+	display: inline-block;
+
 }
+
+
+nav .card {
+
+	overflow: hidden;
+}
+
 
 
 /*** Table Styles ***/

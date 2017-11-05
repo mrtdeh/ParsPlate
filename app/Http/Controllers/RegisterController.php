@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 use App\User;
 
@@ -12,6 +13,9 @@ class RegisterController extends Controller
 	public function create()
 	
 	{
+
+		if(auth()->check())
+			return redirect()->home();
 		
 		return view("register");
 	
@@ -25,7 +29,7 @@ class RegisterController extends Controller
 
 			"name" => "required",
 
-			"email" => "email",
+			"email" => "required|email|unique:users",
 
 			"password" => "required|confirmed"
 		]);

@@ -30,4 +30,43 @@ class CustomApiController extends Controller
 	}
 
 
+	public function likeToggle(Template $template)
+	
+	{
+
+
+		$res = [];
+		
+		if(empty(auth()->user())){
+			$res["status"] = 0;
+		}
+		else{
+			$template->likeToggle();
+			$res["status"] = 1;
+			$res["likesCount"] = $template->likesCount;
+			$res["liked"] = $template->liked;
+
+		}
+
+		
+
+		return response()->json($res);
+	
+	}
+
+
+	public function checkLogin()
+	
+	{
+
+		$res["status"] = 1;
+
+		if(empty(auth()->user()))
+			$res["status"] = 0;
+		
+		return response()->json($res);
+	
+	}
+
+
 }

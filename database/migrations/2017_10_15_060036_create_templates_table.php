@@ -19,9 +19,10 @@ class CreateTemplatesTable extends Migration
             $table->Integer('user_id');
             $table->String("title");
             $table->Text("desc");
-            $table->String("cover");
-            $table->String("demo_addr");
-            $table->String("zip_addr");
+            $table->String("tag");
+            // $table->String("cover");
+            // $table->String("demo_addr");
+            // $table->String("zip_addr");
             $table->timestamps();
         });
     }
